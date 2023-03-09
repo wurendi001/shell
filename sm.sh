@@ -188,7 +188,7 @@ function start_menu(){
     yum update -y && yum install -y curl && yum install -y socat && yum install wget -y
     apt update -y && apt install -y curl && apt install -y socat && apt install wget -y
     clear
-    yellow " =================== 收费脚本项目描述内容 ============================ "
+    yellow " =================== 暂时免费脚本项目描述内容 ============================ "
     green "               ${RED}Xray一键安装脚本${PLAIN}"
 
     red   " 作者： (失落的梦) 常用综合脚本包 " 
