@@ -40,10 +40,6 @@ bash <(curl -s -L https://raw.githubusercontent.com/wurendi001/shell/main/ipv4.s
 function tools(){
 bash <(curl -s -L https://raw.githubusercontent.com/wurendi001/shell/main/tools.sh)
 }
-#212 【 域名IP证书一建申请 】
-function acme(){
-bash <(curl -s -L https://raw.githubusercontent.com/wurendi001/shell/main/acme.sh)
-}
 #214 【 检测IP是否解锁tiktok  一键脚本 】
 function tiktok(){
 bash <(curl -s -L https://raw.githubusercontent.com/wurendi001/shell/main/tiktok.sh)
@@ -99,19 +95,18 @@ function start_menu(){
     yellow " ================== 科学上网工具 ============================ "
     blue " 99.【 BBRS加速另外一个版本 一键脚本 】"
     blue " 1.【 Xray一键安装脚本】"      
-    blue " 3.【 Wulabing v2ray 一键脚本 】" 
-    blue " 4.【 233boy V2Ray 一键安装脚本 】"
-    blue " 5.【 x-ui 一键脚本 】"
-    blue " 6.【 ssr 一键脚本 】 "    
+    blue " 2.【 Wulabing v2ray 一键脚本 】" 
+    blue " 3.【 233boy V2Ray 一键安装脚本 】"
+    blue " 4.【 x-ui 一键脚本 】"
+    blue " 5.【 ssr 一键脚本 】 "    
     yellow " ================= 中转 ============== "
-    blue " 7. iptables 中转 "
-    blue " 8. socat 中转 "      	      
+    blue " 6. iptables 中转 "
+    blue " 7. socat 中转 "      	      
     yellow " =================== 服务器检查 ============================== "
-    green " 9. 检测IP是否解锁tiktok 一键脚本 "	
-    green " 10. ipv4/6优先级调整 " 
-    green " 11. Linux，tcp网络优化 一键脚本 "   
-    green " 12.  域名ip证书续签 一键脚本 "
-    green " 13.  欺诈分数以及IP质量检测 一件代码"
+    green " 8. 检测IP是否解锁tiktok 一键脚本 "	
+    green " 9. ipv4/6优先级调整 " 
+    green " 10. Linux，tcp网络优化 一键脚本 "   
+    green " 11.  欺诈分数以及IP质量检测 一件代码"
     yellow " ========================================================= "   
     blue "     ** 使用时间: $(date)"
     blue " ${Font_Yellow}检测脚本当天运行次数：${TodayRunTimes}; 共计运行次数：${TotalRunTimes} ${Font_Suffix}"
@@ -157,13 +152,6 @@ function start_menu(){
 	;;
 		11 )
              tools
-	;;
-
-		12 )
-             ssl
-	;;
-		13 )
-             che
 	;;
  #==================================
         0 )
