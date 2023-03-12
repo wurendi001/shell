@@ -591,7 +591,7 @@ installbbrplusnew() {
   echo -e "${Tip} ${Red_font_prefix}rescue不是正常内核，要排除这个${Font_color_suffix}"
   echo -e "${Tip} 重启VPS后，请重新运行脚本开启${Red_font_prefix}BBRplus${Font_color_suffix}"
   check_kernel
-  stty erase '^H' && read -p "需要重启VPS后，才能开启BBRplus，是否现在重启 ? [Y/n] :" yn
+  stty erase '^H' && read -p "需要重启VPS后，才能开启BBR魔改版，是否现在重启 ? [Y/n] :" yn
   [ -z "${yn}" ] && yn="y"
   if [[ $yn == [Yy] ]]; then
     echo -e "${Info} VPS 重启中..."
@@ -634,7 +634,7 @@ startbbrplus() {
   echo "net.core.default_qdisc=fq" >>/etc/sysctl.d/99-sysctl.conf
   echo "net.ipv4.tcp_congestion_control=bbrplus" >>/etc/sysctl.d/99-sysctl.conf
   sysctl --system
-  echo -e "${Info}BBRplus修改成功，重启生效！"
+  echo -e "${Info}BBR魔改版修改成功，重启生效！"
 }
 
 #启用Lotserver
@@ -1123,21 +1123,6 @@ gototcpx() {
   wget -O tcpx.sh "https://github.com/ylx2016/Linux-NetSpeed/raw/master/tcpx.sh" && chmod +x tcpx.sh && ./tcpx.sh
 }
 
-#切换到秋水逸冰BBR安装脚本
-gototeddysun_bbr() {
-  clear
-  wget https://github.com/teddysun/across/raw/master/bbr.sh && chmod +x bbr.sh && ./bbr.sh
-}
-
-#切换到一键DD安装系统脚本 新手勿入
-gotodd() {
-  clear
-  echo DD使用git.beta.gs的脚本，知悉
-  sleep 1.5
-  wget -O NewReinstall.sh https://github.com/fcurrk/reinstall/raw/master/NewReinstall.sh && chmod a+x NewReinstall.sh && bash NewReinstall.sh
-  #wget -qO ~/Network-Reinstall-System-Modify.sh 'https://github.com/ylx2016/reinstall/raw/master/Network-Reinstall-System-Modify.sh' && chmod a+x ~/Network-Reinstall-System-Modify.sh && bash ~/Network-Reinstall-System-Modify.sh -UI_Options
-}
-
 #禁用IPv6
 closeipv6() {
   clear
@@ -1180,9 +1165,9 @@ net.ipv6.conf.default.accept_ra = 2" >>/etc/sysctl.d/99-sysctl.conf
 start_menu() {
   clear
   echo && echo -e " TCP加速 一键安装管理脚本 ${Red_font_prefix}[v${sh_ver}]${Font_color_suffix}  母鸡慎用
- ${Green_font_prefix}9.${Font_color_suffix} 切换到不卸载内核版本	${Green_font_prefix}10.${Font_color_suffix} 切换到一键DD系统脚本
+ ${Green_font_prefix}9.${Font_color_suffix} 切换到不卸载内核版本	${Green_font_prefix}
  ${Green_font_prefix}1.${Font_color_suffix} 安装 BBR原版内核
- ${Green_font_prefix}2.${Font_color_suffix} 安装 BBRplus版内核		${Green_font_prefix}5.${Font_color_suffix} 安装 BBRplus新版内核
+ ${Green_font_prefix}2.${Font_color_suffix} 安装 BBR魔改版内核		${Green_font_prefix}5.${Font_color_suffix} 安装 BBR魔改新版内核
  ${Green_font_prefix}3.${Font_color_suffix} 安装 Lotserver(锐速)内核	${Green_font_prefix}6.${Font_color_suffix} 安装 xanmod版内核
  ${Green_font_prefix}11.${Font_color_suffix} 使用BBR+FQ加速		${Green_font_prefix}12.${Font_color_suffix} 使用BBR+FQ_PIE加速 
  ${Green_font_prefix}13.${Font_color_suffix} 使用BBR+CAKE加速
