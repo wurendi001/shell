@@ -99,19 +99,19 @@ function start_menu(){
     yellow " ================== 科学上网工具 ============================ "
     blue " 99.【 BBRS加速另外一个版本 一键脚本 】"
     blue " 1.【 Xray一键安装脚本】"      
-    blue " 4.【 Wulabing v2ray 一键脚本 】" 
-    blue " 5.【 233boy V2Ray 一键安装脚本 】"
-    blue " 6.【 x-ui 一键脚本 】"
-    blue " 7.【 ssr 一键脚本 】 "    
+    blue " 3.【 Wulabing v2ray 一键脚本 】" 
+    blue " 4.【 233boy V2Ray 一键安装脚本 】"
+    blue " 5.【 x-ui 一键脚本 】"
+    blue " 6.【 ssr 一键脚本 】 "    
     yellow " ================= 中转 ============== "
-    blue " 12. iptables 中转 "
-    blue " 13. socat 中转 "      	      
+    blue " 7. iptables 中转 "
+    blue " 8. socat 中转 "      	      
     yellow " =================== 服务器检查 ============================== "
-    green " 20. 检测IP是否解锁tiktok 一键脚本 "	
-    green " 27. ipv4/6优先级调整 " 
-    green " 29. Linux，tcp网络优化 一键脚本 "   
-    green " 38.  域名ip证书续签 一键脚本 "
-    green " 39.  欺诈分数以及IP质量检测 一件代码"
+    green " 9. 检测IP是否解锁tiktok 一键脚本 "	
+    green " 10. ipv4/6优先级调整 " 
+    green " 11. Linux，tcp网络优化 一键脚本 "   
+    green " 12.  域名ip证书续签 一键脚本 "
+    green " 13.  欺诈分数以及IP质量检测 一件代码"
     yellow " ========================================================= "   
     blue "     ** 使用时间: $(date)"
     blue " ${Font_Yellow}检测脚本当天运行次数：${TodayRunTimes}; 共计运行次数：${TotalRunTimes} ${Font_Suffix}"
@@ -121,9 +121,6 @@ function start_menu(){
     read -p "请输入数字:" menuNumberInput
     case "$menuNumberInput" in
  #==================================    
-		00 )
-             bbr
-	;;
 		99 )
              bbrs
 	;;
@@ -131,83 +128,41 @@ function start_menu(){
             vpn001
 	;;
 		2 )
-            vpn000
-	;;
-		3 )
-            vpn002
-	;;
-		4 )
             vpn003
 	;;
-		5 )
+		3 )
             vpn005
 	;;
-		6 )
+		4 )
             x-ui
 	;;
-		7 )
+		5 )
             ssr
 	;;		
-		12 )
+		6 )
              iptsh
 	;;
-		13 )
+		7 )
              socat
 	;;
  #==================================
-		20 )
+		8 )
              tiktok
 	;;
-		23 )
-             jcnf
-	;;
-		24 )
-             getip
-	;;
-		25 )
-             nf
-	;;
-		26 )
-             tubecheck
-	;;
- #==================================
-		27 )
+		9 )
              ipvsh
 	;;
-		28 )
+		10 )
              vmshellvps
 	;;
-		29 )
+		11 )
              tools
 	;;
-		30 )
-             init
-	;;
-		31 )
-             root
-	;;
-		32 )
-             install_6.0
-	;;
-		33 )
-             wuren
-	;;
-		34 )
-             acme
-	;;
-		35 )
-             warpWARP
-	;;
-		36 )
-             ssh_open
-	;;
-		37 )
-             sshport
-	;;
-		38 )
+
+		12 )
              ssl
 	;;
-		39 )
+		13 )
              che
 	;;
  #==================================
