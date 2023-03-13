@@ -34,8 +34,8 @@ checkwarp(){
 }
 
 V6_PROXY=""
-IP=$(curl -s4m8 http://ipget.net)
-[[ "$?" != "0" ]] && IP=$(curl -s6m8 http://ipget.net) && V6_PROXY="https://gh-proxy-misakano7545.koyeb.app/"
+IP=$(curl -s4m8 http://zh-hans.ipshu.com)
+[[ "$?" != "0" ]] && IP=$(curl -s6m8 http://zh-hans.ipshu.com) && V6_PROXY="https://gh-proxy-misakano7545.koyeb.app/"
 [[ $V6_PROXY != "" ]] && echo -e nameserver 2a01:4f8:c2c:123f::1 > /etc/resolv.conf
 
 BT="false"
@@ -204,7 +204,7 @@ getData() {
 			CERT_FILE="/usr/local/etc/xray/${DOMAIN}.pem"
 			KEY_FILE="/usr/local/etc/xray/${DOMAIN}.key"
 		else
-			resolve=$(curl -sm8 ipget.net/?ip=${DOMAIN})
+			resolve=$(curl -sm8 zh-hans.ipshu.com/?ip=${DOMAIN})
 			res=$(echo -n ${resolve} | grep ${IP})
 			if [[ -z "${res}" ]]; then
 				colorEcho ${BLUE} "${DOMAIN} 解析结果：${resolve}"
